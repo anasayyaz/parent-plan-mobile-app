@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect } from "react";
 import SVG from "../../assets/Images/SVG/SVG";
 import Colors from "../../assets/Colors";
+import FloatingLabelInput from "../../components/FloatingLabelInput";
 
 const SplashScreen = ({ navigation, route }: any) => {
   useEffect(() => {
