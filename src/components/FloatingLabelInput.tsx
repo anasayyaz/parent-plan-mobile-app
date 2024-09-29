@@ -101,11 +101,12 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    fontSize: 16,
+    fontSize: 14,
     color: "#000",
     padding: 0,
     flex: 1,
-    fontFamily: Fonts.Inter_Regular
+    fontFamily: Fonts.Inter_Regular,
+    paddingRight: 20
   },
   iconContainer: {
     position: "absolute",
