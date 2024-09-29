@@ -13,6 +13,7 @@ import ArrowLeft from "./ArrowLeft.svg";
 import eyeOn from "./eyeOn.svg";
 import Bell from "./Bell.svg";
 import Menu from "./menu.svg";
+import ArrowDownExpand from "./ArrowDownExpand.svg";
 export default {
   AppLogo: AppLogo,
   ArrowRightGray: ArrowRightGray,
@@ -27,5 +28,6 @@ export default {
   eyeOn: eyeOn,
   ArrowLeft: ArrowLeft,
   Bell: Bell,
-  Menu: Menu
+  Menu: Menu,
+  ArrowDownExpand: ArrowDownExpand
 };

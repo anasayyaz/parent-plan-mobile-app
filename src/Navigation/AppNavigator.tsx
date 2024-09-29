@@ -11,13 +11,14 @@ import AddMemberScreen from "../Screens/AddMemberScreen";
 import FreeTrialScreen from "../Screens/FreeTrialScreen";
 import SubscriptionPlansScreen from "../Screens/SubscriptionPlansScreen";
 import { TabNavigator } from "./TabNavigator";
+import AddMedicationScreen from "../Screens/AddMedicationScreen";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Tab"
+        initialRouteName="AddMedicationScreen"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
@@ -30,6 +31,10 @@ const AppNavigator = () => {
         <Stack.Screen
           name="SubscriptionPlansScreen"
           component={SubscriptionPlansScreen}
+        />
+        <Stack.Screen
+          name="AddMedicationScreen"
+          component={AddMedicationScreen}
         />
         <Stack.Screen name="Tab" component={TabNavigator} />
       </Stack.Navigator>
