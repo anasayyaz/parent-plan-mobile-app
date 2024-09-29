@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  TextInput,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  StyleSheetProperties,
-  TextStyle
-} from "react-native";
+import { View, TextInput, StyleSheet, TextStyle } from "react-native";
 import Fonts from "../assets/fonts/Fonts";
 import TouchableAura from "../Wrappers/TouchableAura";
 import SVG from "../assets/Images/SVG/SVG"; // Import your eye icons
@@ -20,10 +12,10 @@ const FloatingLabelInputWithIcon = ({
   onChangeText,
   placeholder,
   icon,
-  secureTextEntry = false, // Add this prop
-  labelStyles, // New prop for label styles
+  secureTextEntry = false,
+  labelStyles,
   inputStyles,
-  containerStyles // New prop for input styles
+  containerStyles
 }: {
   label?: string;
   value?: string;
@@ -31,9 +23,9 @@ const FloatingLabelInputWithIcon = ({
   placeholder?: string;
   icon?: any;
   secureTextEntry?: boolean;
-  labelStyles?: TextStyle; // Optional styles for the label
+  labelStyles?: TextStyle;
   inputStyles?: object;
-  containerStyles?: Object; // Optional styles for the input// Optional prop for password input
+  containerStyles?: Object;
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(!secureTextEntry);
@@ -61,7 +53,7 @@ const FloatingLabelInputWithIcon = ({
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         blurOnSubmit
-        secureTextEntry={!isPasswordVisible && secureTextEntry} // Toggle secureTextEntry
+        secureTextEntry={!isPasswordVisible && secureTextEntry}
       />
       {secureTextEntry ? (
         <TouchableAura
@@ -69,7 +61,6 @@ const FloatingLabelInputWithIcon = ({
           onPress={togglePasswordVisibility}
         >
           {isPasswordVisible ? <SVG.eyeOn /> : <SVG.eyeoff />}
-          {/* Conditional rendering */}
         </TouchableAura>
       ) : (
         icon && (

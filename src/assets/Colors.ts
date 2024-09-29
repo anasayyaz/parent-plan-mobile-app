@@ -5,5 +5,6 @@ export default {
   ButtonPrimaryDisabled: "rgba(57, 20, 72, 0.3)",
   ButtonPrimary: "rgba(57, 20, 72, 1)",
   ButtonPrimaryText: "rgba(255, 255, 255, 1)",
-  SecoundryTextColor: "#5B5B5B"
+  SecoundryTextColor: "#5B5B5B",
+  SecoundryColor: "rgba(152, 114, 63, 0.5)"
 };

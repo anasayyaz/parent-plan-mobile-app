@@ -37,6 +37,7 @@ const AddMemberScreen = ({ navigation }: any) => {
           </TextAura>
           <FloatingLabelInputWithIcon
             icon={<SVG.inboxIcon />}
+            placeholder="contact@gmail.com"
             label={"Email Address"}
             value={email}
             onChangeText={setEmail}

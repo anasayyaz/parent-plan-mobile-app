@@ -9,6 +9,7 @@ import LoginScreen from "../Screens/LoginScreen";
 import SignUpScreen from "../Screens/SignUpScreen";
 import AddMemberScreen from "../Screens/AddMemberScreen";
 import FreeTrialScreen from "../Screens/FreeTrialScreen";
+import SubscriptionPlansScreen from "../Screens/SubscriptionPlansScreen";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -22,6 +23,10 @@ const AppNavigator = () => {
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="AddMemberScreen" component={AddMemberScreen} />
         <Stack.Screen name="FreeTrialScreen" component={FreeTrialScreen} />
+        <Stack.Screen
+          name="SubscriptionPlansScreen"
+          component={SubscriptionPlansScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

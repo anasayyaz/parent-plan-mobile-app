@@ -50,6 +50,7 @@ const LoginScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             icon={<SVG.inboxIcon />}
             label={"Email Address"}
+            placeholder="contact@gmail.com"
             value={email}
             onChangeText={setEmail}
             containerStyles={styles.inputContainer}
@@ -61,6 +62,7 @@ const LoginScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             secureTextEntry
             label={"Password"}
+            placeholder="************"
             value={password}
             onChangeText={setPassword}
             containerStyles={styles.inputContainer}

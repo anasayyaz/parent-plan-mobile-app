@@ -70,6 +70,7 @@ const SignUpScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             icon={<SVG.PersonWithPencil />}
             label={"Full Name"}
+            placeholder="Name Here"
             value={fullName}
             onChangeText={setFullName}
             containerStyles={styles.inputContainer}
@@ -81,6 +82,7 @@ const SignUpScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             icon={<SVG.inboxIcon />}
             label={"Email Address"}
+            placeholder="contact@gmail.com"
             value={email}
             onChangeText={setEmail}
             containerStyles={styles.inputContainer}
@@ -92,6 +94,7 @@ const SignUpScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             secureTextEntry
             label={"Password"}
+            placeholder="************"
             value={password}
             onChangeText={setPassword}
             containerStyles={styles.inputContainer}
@@ -103,6 +106,7 @@ const SignUpScreen = ({ navigation }: any) => {
           <FloatingLabelInputWithIcon
             secureTextEntry
             label={"Confirm Password"}
+            placeholder="************"
             value={confirmPassword}
             onChangeText={setConfirmPassword}
             containerStyles={styles.inputContainer}

@@ -8,7 +8,9 @@ import TextButton from "../../components/TextButton";
 import FreeTrialImage from "../../assets/Images/SVG/FreeTrial.svg";
 
 const FreeTrialScreen = ({ navigation }: any) => {
-  const handleNextPress = () => {};
+  const handleNextPress = () => {
+    navigation.navigate("SubscriptionPlansScreen");
+  };
   return (
     <HeaderProvider>
       <View style={styles.container}>
