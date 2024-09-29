@@ -3,14 +3,18 @@ import React, { useEffect } from "react";
 import SVG from "../../assets/Images/SVG/SVG";
 import Colors from "../../assets/Colors";
 import FloatingLabelInput from "../../components/FloatingLabelInput";
+import { useNavigation } from "@react-navigation/native";
 
-const SplashScreen = ({ navigation, route }: any) => {
+const SplashScreen = ({ route }: any) => {
+  const navigation = useNavigation();
+
   useEffect(() => {
     const timer = setTimeout(() => {
+      //@ts-ignore
       navigation.replace("OnBoardingScreen");
-    }, 2000);
+    }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
   }, [navigation]);
   return (
     <View style={styles.background}>

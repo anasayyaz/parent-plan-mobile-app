@@ -7,6 +7,7 @@ import {
   TouchableOpacity
 } from "react-native";
 import Fonts from "../assets/fonts/Fonts";
+import TouchableAura from "../Wrappers/TouchableAura";
 
 const FloatingLabelInputWithIcon = ({
   label,
@@ -36,7 +37,7 @@ const FloatingLabelInputWithIcon = ({
         blurOnSubmit
       />
       {icon && (
-        <TouchableOpacity style={styles.iconContainer}>{icon}</TouchableOpacity>
+        <TouchableAura style={styles.iconContainer}>{icon}</TouchableAura>
       )}
     </View>
   );
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
     left: 10,
     color: "#5B5B5B",
     backgroundColor: "white",
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    fontFamily: Fonts.Inter_Regular
   },
   input: {
     height: 40,

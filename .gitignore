@@ -4,5 +4,3 @@ node_modules
 /android/.gradle
 /ios/Pods
 /ios/build
-ios/ParentPlanMobileApp.xcodeproj/project.pbxproj
-ios/Podfile.lock
