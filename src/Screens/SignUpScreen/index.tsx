@@ -1,12 +1,11 @@
-import { Alert, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import CommonHeader from "../../components/CommonHeader";
+import { StyleSheet, Text, View } from "react-native";
 import Colors from "../../assets/Colors";
 import SVG from "../../assets/Images/SVG/SVG";
-import HeaderProvider from "../../Provider/HeaderProvider";
-import TextAura from "../../Wrappers/TextAura";
 import FloatingLabelInputWithIcon from "../../components/FloatingLabelInput";
 import TextButton from "../../components/TextButton";
+import HeaderProvider from "../../Provider/HeaderProvider";
+import TextAura from "../../Wrappers/TextAura";
 
 const SignUpScreen = ({ navigation }: any) => {
   const [fullName, setFullName] = useState("");
@@ -53,15 +52,13 @@ const SignUpScreen = ({ navigation }: any) => {
 
     setErrors(newErrors);
 
-    // Check if there are no errors before proceeding with signup
     if (
       !newErrors.fullName &&
       !newErrors.email &&
       !newErrors.password &&
       !newErrors.confirmPassword
     ) {
-      // Proceed with signup logic
-      Alert.alert("Sign Up Successful!");
+      navigation?.navigate("LoginScreen");
     }
   };
 

@@ -14,18 +14,17 @@ const AddMemberScreen = ({ navigation }: any) => {
   const validateEmail = (email: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  const handleSignUp = () => {
-    const emailError = !email
-      ? "Email Address is required."
-      : !validateEmail(email)
-      ? "Invalid email format."
-      : "";
-
-    setErrors({ email: emailError });
-
-    if (!emailError) {
-      Alert.alert("Login Successful!");
-    }
+  const handleAddPress = () => {
+    // const emailError = !email
+    //   ? "Email Address is required."
+    //   : !validateEmail(email)
+    //   ? "Invalid email format."
+    //   : "";
+    // setErrors({ email: emailError });
+    // if (!emailError) {
+    // Alert.alert("Login Successful!");
+    // }
+    navigation.navigate("FreeTrialScreen");
   };
 
   return (
@@ -48,7 +47,7 @@ const AddMemberScreen = ({ navigation }: any) => {
           ) : null}
         </View>
         <View style={styles.footerContainer}>
-          <TextButton title="ADD MEMBER" onPress={handleSignUp} />
+          <TextButton title="ADD MEMBER" onPress={handleAddPress} />
         </View>
       </View>
     </HeaderProvider>
@@ -77,7 +76,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 14,
     fontWeight: "400",
-    marginBottom: 30
+    marginBottom: 30,
+    lineHeight: 21
   },
   footerContainer: {
     alignItems: "center",
