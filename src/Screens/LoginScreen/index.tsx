@@ -38,7 +38,7 @@ const LoginScreen = ({ navigation }: any) => {
     setErrors(newErrors);
 
     if (!newErrors.email && !newErrors.password) {
-      Alert.alert("Login Successful!");
+      navigation?.navigate("AddMemberScreen");
     }
   };
   return (
