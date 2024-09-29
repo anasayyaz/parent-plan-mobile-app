@@ -11,8 +11,8 @@ import {
 import FastImage, { FastImageProps, Source } from "react-native-fast-image";
 
 interface ImageAuraProps extends Omit<ImageProps, "source"> {
-  containerStyle?: ViewStyle; // Optional style for the container
-  source: ImageSourcePropType | Source; // Allow both Image and FastImage sources
+  containerStyle?: ViewStyle;
+  source: ImageSourcePropType | Source;
 }
 
 const ImageAura: React.FC<ImageAuraProps> = ({
@@ -21,10 +21,8 @@ const ImageAura: React.FC<ImageAuraProps> = ({
   source,
   ...props
 }) => {
-  // Platform-specific image component
   const ImageComponent = FastImage;
 
-  // Convert the source to the proper format if using FastImage
   const imageSource =
     Platform.OS === "ios" && (source as any).uri
       ? { uri: (source as any).uri, priority: FastImage.priority.high }
@@ -45,10 +43,6 @@ const ImageAura: React.FC<ImageAuraProps> = ({
 export default ImageAura;
 
 const styles = StyleSheet.create({
-  container: {
-    // Default container styles (if any)
-  },
-  image: {
-    // Default image styles (if any)
-  }
+  container: {},
+  image: {}
 });

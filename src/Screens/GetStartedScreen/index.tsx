@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginVertical: 5
   },
   boldText: {
-    fontWeight: "600",
+    fontWeight: "800",
     fontSize: 12,
     lineHeight: 18
   },

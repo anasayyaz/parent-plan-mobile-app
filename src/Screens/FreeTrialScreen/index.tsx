@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
   loginLink: {
-    fontWeight: "600",
+    fontWeight: "800",
     fontSize: 14,
     color: Colors.ButtonPrimary
   }

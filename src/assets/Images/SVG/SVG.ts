@@ -11,6 +11,8 @@ import inboxIcon from "./inboxIcon.svg";
 import eyeoff from "./eyeoff.svg";
 import ArrowLeft from "./ArrowLeft.svg";
 import eyeOn from "./eyeOn.svg";
+import Bell from "./Bell.svg";
+import Menu from "./menu.svg";
 export default {
   AppLogo: AppLogo,
   ArrowRightGray: ArrowRightGray,
@@ -23,5 +25,7 @@ export default {
   inboxIcon: inboxIcon,
   eyeoff: eyeoff,
   eyeOn: eyeOn,
-  ArrowLeft: ArrowLeft
+  ArrowLeft: ArrowLeft,
+  Bell: Bell,
+  Menu: Menu
 };

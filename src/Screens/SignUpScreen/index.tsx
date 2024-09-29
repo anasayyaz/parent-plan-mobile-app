@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   loginLink: {
-    fontWeight: "600",
+    fontWeight: "800",
     fontSize: 14,
     textDecorationLine: "underline",
     color: Colors.ButtonPrimary

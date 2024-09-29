@@ -7,6 +7,7 @@ import SVG from "../../assets/Images/SVG/SVG";
 import Colors from "../../assets/Colors";
 import TextButton from "../../components/TextButton";
 import CheckBox from "@react-native-community/checkbox";
+import TouchableAura from "../../Wrappers/TouchableAura";
 
 const LoginScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState("");
@@ -108,6 +109,7 @@ const LoginScreen = ({ navigation }: any) => {
                 Remember Me
               </TextAura>
             </View>
+
             <TextAura
               style={{
                 color: Colors.SecoundryTextColor,
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   loginLink: {
-    fontWeight: "600",
+    fontWeight: "800",
     fontSize: 14,
     textDecorationLine: "underline",
     color: Colors.ButtonPrimary
