@@ -1,43 +1,80 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   View,
   TextInput,
   StyleSheet,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  StyleSheetProperties,
+  TextStyle
 } from "react-native";
 import Fonts from "../assets/fonts/Fonts";
 import TouchableAura from "../Wrappers/TouchableAura";
+import SVG from "../assets/Images/SVG/SVG"; // Import your eye icons
+import TextAura from "../Wrappers/TextAura";
+import Colors from "../assets/Colors";
 
 const FloatingLabelInputWithIcon = ({
   label,
   value,
   onChangeText,
   placeholder,
-  icon
-}: any) => {
+  icon,
+  secureTextEntry = false, // Add this prop
+  labelStyles, // New prop for label styles
+  inputStyles,
+  containerStyles // New prop for input styles
+}: {
+  label?: string;
+  value?: string;
+  onChangeText?: (text: string) => void;
+  placeholder?: string;
+  icon?: any;
+  secureTextEntry?: boolean;
+  labelStyles?: TextStyle; // Optional styles for the label
+  inputStyles?: object;
+  containerStyles?: Object; // Optional styles for the input// Optional prop for password input
+}) => {
   const [isFocused, setIsFocused] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(!secureTextEntry);
+
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
   return (
     <View
       style={[
         styles.container,
+        containerStyles,
         isFocused ? styles.focusedContainer : styles.defaultContainer
       ]}
     >
-      <Text style={styles.label}>{label}</Text>
+      {/* @ts-ignore */}
+      <TextAura style={[styles.label, labelStyles]}>{label}</TextAura>
       <TextInput
         value={value}
         placeholder={placeholder}
         placeholderTextColor="#9B9B9B"
         onChangeText={onChangeText}
-        style={styles.input}
+        style={[styles.input, inputStyles]}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         blurOnSubmit
+        secureTextEntry={!isPasswordVisible && secureTextEntry} // Toggle secureTextEntry
       />
-      {icon && (
-        <TouchableAura style={styles.iconContainer}>{icon}</TouchableAura>
+      {secureTextEntry ? (
+        <TouchableAura
+          style={styles.iconContainer}
+          onPress={togglePasswordVisibility}
+        >
+          {isPasswordVisible ? <SVG.eyeOn /> : <SVG.eyeoff />}
+          {/* Conditional rendering */}
+        </TouchableAura>
+      ) : (
+        icon && (
+          <TouchableAura style={styles.iconContainer}>{icon}</TouchableAura>
+        )
       )}
     </View>
   );
@@ -52,7 +89,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     position: "relative",
     justifyContent: "center",
-    marginVertical: 10,
     backgroundColor: "white",
     flexDirection: "row",
     alignItems: "center"
@@ -67,7 +103,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: -10,
     left: 10,
-    color: "#5B5B5B",
+    color: Colors.SecoundryTextColor,
     backgroundColor: "white",
     paddingHorizontal: 10,
     fontFamily: Fonts.Inter_Regular

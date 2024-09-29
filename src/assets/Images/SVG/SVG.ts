@@ -9,6 +9,8 @@ import GetStartedImage from "./GetStartedImage.svg";
 import PersonWithPencil from "./PersonWithPencil.svg";
 import inboxIcon from "./inboxIcon.svg";
 import eyeoff from "./eyeoff.svg";
+import ArrowLeft from "./ArrowLeft.svg";
+import eyeOn from "./eyeOn.svg";
 export default {
   AppLogo: AppLogo,
   ArrowRightGray: ArrowRightGray,
@@ -19,5 +21,7 @@ export default {
   GetStartedImage: GetStartedImage,
   PersonWithPencil: PersonWithPencil,
   inboxIcon: inboxIcon,
-  eyeoff: eyeoff
+  eyeoff: eyeoff,
+  eyeOn: eyeOn,
+  ArrowLeft: ArrowLeft
 };

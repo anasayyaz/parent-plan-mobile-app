@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect } from "react";
-import SVG from "../../assets/Images/SVG/SVG";
-import Colors from "../../assets/Colors";
-import FloatingLabelInput from "../../components/FloatingLabelInput";
 import { useNavigation } from "@react-navigation/native";
+import React, { useEffect } from "react";
+import { StyleSheet, View } from "react-native";
+import Colors from "../../assets/Colors";
+import SVG from "../../assets/Images/SVG/SVG";
 
 const SplashScreen = ({ route }: any) => {
   const navigation = useNavigation();

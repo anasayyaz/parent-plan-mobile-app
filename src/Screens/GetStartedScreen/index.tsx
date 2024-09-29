@@ -5,18 +5,12 @@ import Colors from "../../assets/Colors";
 import TextAura from "../../Wrappers/TextAura";
 import TextButton from "../../components/TextButton";
 
-const GetStartedScreen = () => {
+const GetStartedScreen = ({ navigation, route }: any) => {
   return (
     <SafeAreaView style={styles.container}>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "space-evenly",
-          alignItems: "center"
-        }}
-      >
+      <View style={styles.contentContainer}>
         <SVG.GetStartedImage />
-        <View style={{ width: "100%" }}>
+        <View style={styles.textContainer}>
           <TextAura style={styles.welcomeText}>
             Welcome to{" "}
             <TextAura style={styles.appNameText}>Parent {"\n"} Plan</TextAura>{" "}
@@ -25,8 +19,16 @@ const GetStartedScreen = () => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <TextButton title="SIGN UP" />
         <TextButton
+          onPress={() => {
+            navigation?.navigate("SignUpScreen");
+          }}
+          title="SIGN UP"
+        />
+        <TextButton
+          onPress={() => {
+            navigation?.navigate("LoginScreen");
+          }}
           style={styles.loginButton}
           textStyle={styles.loginButtonText}
           title="LOGIN"
@@ -50,6 +52,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: Colors.Background
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: "space-evenly",
+    alignItems: "center"
+  },
+  textContainer: {
+    width: "100%"
   },
   welcomeText: {
     fontWeight: "700",
