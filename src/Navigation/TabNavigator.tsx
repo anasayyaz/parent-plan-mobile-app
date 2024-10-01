@@ -4,6 +4,9 @@ import { StyleSheet, View } from "react-native";
 import HomeScreen from "../Screens/HomeScreen";
 import CalenderScreen from "../Screens/CalenderScreen";
 import Colors from "../assets/Colors";
+import ChatScreen from "../Screens/ChatScreen/ChatScreen";
+import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
+import SVG from "../assets/Images/SVG/SVG";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,15 +30,32 @@ export function TabNavigator() {
           name="Home"
           component={HomeScreen}
           options={{
-            // tabBarIcon: ({ color }) => <Home fill={color} />,
+            tabBarIcon: () => <SVG.Home height={30} width={30} />,
             tabBarLabel: "Home"
           }}
         />
         <Tab.Screen
-          name="Calender"
+          name="Calendar"
           component={CalenderScreen}
           options={{
-            // tabBarIcon: ({ color }) => <Profile fill={color} />,
+            tabBarIcon: () => <SVG.CalendarTab height={30} width={30} />,
+            tabBarLabel: "Calendar"
+          }}
+        />
+        <Tab.Screen
+          name="Chat"
+          component={ChatScreen}
+          options={{
+            tabBarIcon: () => <SVG.ChatTab height={30} width={30} />,
+            tabBarLabel: "Chat"
+          }}
+        />
+
+        <Tab.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{
+            tabBarIcon: () => <SVG.Person height={30} width={30} />,
             tabBarLabel: "Profile"
           }}
         />
@@ -50,7 +70,6 @@ const styles = StyleSheet.create({
   },
   tabBarStyles: {
     backgroundColor: Colors.PrimaryColor,
-    paddingHorizontal: 20,
     width: "100%",
     borderColor: Colors.Background
   }

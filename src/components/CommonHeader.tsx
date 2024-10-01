@@ -5,7 +5,7 @@ import {
   Text,
   StyleSheet,
   StatusBar,
-  Platform
+  Platform,
 } from "react-native";
 import SVG from "../assets/Images/SVG/SVG";
 import TouchableAura from "../Wrappers/TouchableAura";
@@ -58,27 +58,27 @@ const CommonHeader = ({ leftIcon, rightIcon, centerText }: any) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
   },
   header: {
     backgroundColor: "#3F0D5A",
     height: 93,
     paddingTop: Platform.OS === "ios" ? 50 : StatusBar.currentHeight,
     paddingHorizontal: 16,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   headerContent: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   title: {
     color: "#FFFFFF",
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default CommonHeader;

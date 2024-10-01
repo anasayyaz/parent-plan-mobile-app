@@ -1,18 +1,38 @@
 //@ts-nocheck
-import AppLogo from "../SVG/AppLogo.svg";
-import ArrowRightGray from "./ArrowRightGray.svg";
-import OnBoarding1 from "./OnBoarding1.svg";
-import OnBoarding2 from "./OnBoarding2.svg";
-import OnBoarding3 from "./OnBoarding3.svg";
-import OnBoarding4 from "./OnBoarding4.svg";
-import GetStartedImage from "./GetStartedImage.svg";
-import PersonWithPencil from "./PersonWithPencil.svg";
-import inboxIcon from "./inboxIcon.svg";
-import eyeoff from "./eyeoff.svg";
-import ArrowLeft from "./ArrowLeft.svg";
-import eyeOn from "./eyeOn.svg";
-import Bell from "./Bell.svg";
-import Menu from "./menu.svg";
+import AppLogo from "./Icon/AppLogo";
+import ArrowRightGray from "./Icon/ArrowRightGray.svg";
+import OnBoarding1 from "./Icon/OnBoarding1.svg";
+import OnBoarding2 from "./Icon/OnBoarding2.svg";
+import OnBoarding3 from "./Icon/OnBoarding3.svg";
+import OnBoarding4 from "./Icon/OnBoarding4.svg";
+import GetStartedImage from "./Icon/GetStartedImage.svg";
+import PersonWithPencil from "./Icon/PersonWithPencil.svg";
+import inboxIcon from "./Icon/inboxIcon.svg";
+import eyeoff from "./Icon/eyeoff.svg";
+import ArrowLeft from "./Icon/ArrowLeft.svg";
+import eyeOn from "./Icon/eyeOn.svg";
+import Bell from "./Icon/Bell.svg";
+import Menu from "./Icon/menu.svg";
+/////Drawer Icon
+import Add from "./DrawerIcon/Add.svg";
+import Bag from "./DrawerIcon/Bag.svg";
+import Calendar from "./DrawerIcon/Calendar.svg";
+import Card from "./DrawerIcon/Card.svg";
+import Chat from "./DrawerIcon/Chat.svg";
+import ContactBook from "./DrawerIcon/ContactBook.svg";
+import Currency from "./DrawerIcon/Currency.svg";
+import Infant from "./DrawerIcon/Infant.svg";
+import Injury from "./DrawerIcon/Injury.svg";
+import Notes from "./DrawerIcon/Notes.svg";
+import Pill from "./DrawerIcon/Pill.svg";
+import Logout from "./DrawerIcon/Logout.svg";
+/////////
+import CalendarClock from "./Icon/CalendarClock.svg";
+import Home from "./TabBarIcon/Home.svg";
+import CalendarTab from "./TabBarIcon/CalendarTab.svg";
+import ChatTab from "./TabBarIcon/ChatTab.svg";
+import Person from "./TabBarIcon/Person.svg";
+
 export default {
   AppLogo: AppLogo,
   ArrowRightGray: ArrowRightGray,
@@ -27,5 +47,22 @@ export default {
   eyeOn: eyeOn,
   ArrowLeft: ArrowLeft,
   Bell: Bell,
-  Menu: Menu
+  Menu: Menu,
+  Add,
+  Bag,
+  Calendar,
+  Card,
+  Chat,
+  ContactBook,
+  Currency,
+  Infant,
+  Injury,
+  Notes,
+  Pill,
+  Logout,
+  CalendarClock,
+  Home,
+  CalendarTab,
+  ChatTab,
+  Person
 };
