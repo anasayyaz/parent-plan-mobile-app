@@ -15,7 +15,8 @@ const FloatingLabelInputWithIcon = ({
   secureTextEntry = false,
   labelStyles,
   inputStyles,
-  containerStyles
+  containerStyles,
+  multiline = false
 }: {
   label?: string;
   value?: string;
@@ -26,6 +27,7 @@ const FloatingLabelInputWithIcon = ({
   labelStyles?: TextStyle;
   inputStyles?: object;
   containerStyles?: Object;
+  multiline?: boolean;
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(!secureTextEntry);
@@ -45,6 +47,7 @@ const FloatingLabelInputWithIcon = ({
       {/* @ts-ignore */}
       <TextAura style={[styles.label, labelStyles]}>{label}</TextAura>
       <TextInput
+        multiline={multiline}
         value={value}
         placeholder={placeholder}
         placeholderTextColor="#9B9B9B"
@@ -82,7 +85,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    height: 50
   },
   defaultContainer: {
     borderColor: "rgba(155, 155, 155, 0.5)"
