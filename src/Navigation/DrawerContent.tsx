@@ -4,6 +4,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import SVG from "../assets/Images/SVG/SVG";
 import TextAura from "../Wrappers/TextAura";
 import Fonts from "../assets/fonts/Fonts";
+import Colors from "../assets/Colors";
 
 const CustomDrawerContent = (props) => {
   return (
@@ -14,14 +15,13 @@ const CustomDrawerContent = (props) => {
       <View style={styles.profileContainer}>
         <Image
           source={{
-            uri: "https://img.freepik.com/free-photo/happy-business-man-standing-smiling-against-red-wall_155003-9367.jpg?w=826&t=st=1727640989~exp=1727641589~hmac=b41c49ad9e2a6920a8fe8eb2417b6fff6b5dbeba38387d080e62f56e646c5978",
+            uri: "https://img.freepik.com/free-photo/happy-business-man-standing-smiling-against-red-wall_155003-9367.jpg?w=826&t=st=1727640989~exp=1727641589~hmac=b41c49ad9e2a6920a8fe8eb2417b6fff6b5dbeba38387d080e62f56e646c5978"
           }}
           style={styles.profileImage}
         />
         <TextAura style={styles.profileName}>John</TextAura>
         <TextAura style={styles.profileEmail}>john@gmail.com</TextAura>
       </View>
-
       <View style={styles.drawerItemsContainer}>
         <DrawerItem
           label="Add Child"
@@ -90,7 +90,6 @@ const CustomDrawerContent = (props) => {
           onPress={() => console.log("Card Details")}
         />
       </View>
-
       <DrawerItem
         label="Log Out"
         labelStyle={styles.logoutLabel}
@@ -104,41 +103,41 @@ const CustomDrawerContent = (props) => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#391448",
+    backgroundColor: "#391448"
   },
   profileContainer: {
     alignItems: "center",
-    padding: 20,
+    padding: 20
   },
   profileImage: {
     width: 80,
     height: 80,
     borderRadius: 40,
-    marginBottom: 10,
+    marginBottom: 10
   },
   profileName: {
     color: "#FFFFFF",
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   profileEmail: {
-    color: "#B3B3B3",
-    fontSize: 14,
+    color: Colors.Gray,
+    fontSize: 14
   },
   drawerItemsContainer: {
     flex: 1,
     paddingVertical: 10,
-    fontFamily: Fonts.Inter_Regular,
+    fontFamily: Fonts.Inter_Regular
   },
   drawerItemLabel: {
-    color: "#FFFFFF",
-    fontSize: 16,
+    color: "#9B9B9B",
+    fontSize: 16
   },
   logoutLabel: {
-    color: "#FFFFFF",
+    color: Colors.Gray,
     fontWeight: "bold",
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 });
 
 export default CustomDrawerContent;

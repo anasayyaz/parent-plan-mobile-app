@@ -32,6 +32,9 @@ import Home from "./TabBarIcon/Home.svg";
 import CalendarTab from "./TabBarIcon/CalendarTab.svg";
 import ChatTab from "./TabBarIcon/ChatTab.svg";
 import Person from "./TabBarIcon/Person.svg";
+import PillWhite from "./Icon/PillWhite.svg";
+import CalendarEdit from "./Icon/CalendarEdit.svg";
+import DeleteRedOutlines from "./Icon/DeleteRedOutline.svg";
 
 export default {
   AppLogo: AppLogo,
@@ -64,5 +67,8 @@ export default {
   Home,
   CalendarTab,
   ChatTab,
-  Person
+  Person,
+  PillWhite,
+  CalendarEdit,
+  DeleteRedOutlines
 };
