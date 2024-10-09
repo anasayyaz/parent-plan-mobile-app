@@ -75,7 +75,7 @@ const SubjectsScreen = () => {
         component: <Ionicons name="arrow-back" size={24} color="white" />,
         onPress: () => navigation.openDrawer()
       }}
-      centerText="Medication"
+      centerText="Subjects"
       rightIcon={{ component: <SVG.Bell />, onPress: () => {} }}
     >
       <View style={styles.container}>
