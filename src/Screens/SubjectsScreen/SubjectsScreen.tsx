@@ -14,8 +14,10 @@ import Feather from "react-native-vector-icons/Feather";
 import CustomPicker from "../Medication/CustomPicker";
 import HeaderProvider from "../../Provider/HeaderProvider";
 import SVG from "../../assets/Images/SVG/SVG";
+import { useNavigation } from "@react-navigation/native";
 
 const SubjectsScreen = () => {
+  const navigation = useNavigation();
   const [selectedChild, setSelectedChild] = useState("All");
   const [subjects, setSubjects] = useState([
     { id: "1", name: "English", icon: "ios-text-outline" },
