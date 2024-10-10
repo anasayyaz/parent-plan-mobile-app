@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -13,6 +13,58 @@ import HeaderProvider from "../../Provider/HeaderProvider";
 import SVG from "../../assets/Images/SVG/SVG";
 
 const ProfileScreen = () => {
+  // State for input values and errors
+  const [formData, setFormData] = useState({
+    fullName: "",
+    password: "",
+    gender: "",
+    address: ""
+  });
+
+  const [errors, setErrors] = useState({
+    fullName: "",
+    password: "",
+    gender: "",
+    address: ""
+  });
+
+  // Function to handle form validation
+  const validate = () => {
+    let valid = true;
+    let newErrors = { fullName: "", password: "", gender: "", address: "" };
+
+    if (!formData.fullName) {
+      newErrors.fullName = "Full name is required";
+      valid = false;
+    }
+
+    if (!formData.password || formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+      valid = false;
+    }
+
+    if (!formData.gender) {
+      newErrors.gender = "Gender is required";
+      valid = false;
+    }
+
+    if (!formData.address) {
+      newErrors.address = "Address is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  // Function to handle form submission
+  const handleSave = () => {
+    if (validate()) {
+      // Proceed with form submission or any other logic
+      console.log("Form is valid. Submitting...");
+    }
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <HeaderProvider
@@ -47,9 +99,16 @@ const ProfileScreen = () => {
                 style={styles.input}
                 placeholder="Name here"
                 placeholderTextColor="#7c6b5a"
+                value={formData.fullName}
+                onChangeText={(text) =>
+                  setFormData({ ...formData, fullName: text })
+                }
               />
               <Icon name="person-outline" size={20} color="#7c6b5a" />
             </View>
+            {errors.fullName ? (
+              <Text style={styles.errorText}>{errors.fullName}</Text>
+            ) : null}
 
             <Text style={styles.label}>Change Password</Text>
             <View style={styles.inputContainer}>
@@ -58,9 +117,16 @@ const ProfileScreen = () => {
                 placeholder="*****************"
                 placeholderTextColor="#7c6b5a"
                 secureTextEntry
+                value={formData.password}
+                onChangeText={(text) =>
+                  setFormData({ ...formData, password: text })
+                }
               />
               <Icon name="eye-off-outline" size={20} color="#7c6b5a" />
             </View>
+            {errors.password ? (
+              <Text style={styles.errorText}>{errors.password}</Text>
+            ) : null}
 
             <Text style={styles.label}>Gender</Text>
             <View style={styles.inputContainer}>
@@ -68,9 +134,16 @@ const ProfileScreen = () => {
                 style={styles.input}
                 placeholder="Male"
                 placeholderTextColor="#7c6b5a"
+                value={formData.gender}
+                onChangeText={(text) =>
+                  setFormData({ ...formData, gender: text })
+                }
               />
               <Icon name="chevron-down-outline" size={20} color="#7c6b5a" />
             </View>
+            {errors.gender ? (
+              <Text style={styles.errorText}>{errors.gender}</Text>
+            ) : null}
 
             <Text style={styles.label}>Address</Text>
             <View style={styles.inputContainer}>
@@ -78,13 +151,20 @@ const ProfileScreen = () => {
                 style={styles.input}
                 placeholder="London"
                 placeholderTextColor="#7c6b5a"
+                value={formData.address}
+                onChangeText={(text) =>
+                  setFormData({ ...formData, address: text })
+                }
               />
               <Icon name="location-outline" size={20} color="#7c6b5a" />
             </View>
+            {errors.address ? (
+              <Text style={styles.errorText}>{errors.address}</Text>
+            ) : null}
           </View>
 
           {/* Save Button */}
-          <TouchableOpacity style={styles.saveButton}>
+          <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
             <Text style={styles.saveButtonText}>SAVE</Text>
           </TouchableOpacity>
         </View>
@@ -94,28 +174,8 @@ const ProfileScreen = () => {
 };
 
 export default ProfileScreen;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingHorizontal: 20
-  },
-  header: {
-    backgroundColor: "#52316b",
-    height: 180,
-    paddingHorizontal: 15,
-    paddingTop: 60,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  headerTitle: {
-    fontSize: 22,
-    color: "#fff",
-    fontWeight: "bold",
-    marginLeft: 10
-  },
   profileImageWrapper: {
     top: 50,
     height: 100,
@@ -130,7 +190,6 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     borderColor: "#fff"
-    // borderWidth: 3
   },
   editIcon: {
     position: "absolute",
@@ -155,9 +214,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#e0d7cd",
-    borderRadius: 12,
+    borderRadius: 25,
     paddingHorizontal: 10,
-    marginBottom: 15
+    marginBottom: 5
   },
   input: {
     flex: 1,
@@ -165,10 +224,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#52316b"
   },
+  errorText: {
+    color: "red",
+    fontSize: 12,
+    marginBottom: 15
+  },
   saveButton: {
     backgroundColor: "#52316b",
     paddingVertical: 15,
-    borderRadius: 12,
+    borderRadius: 25,
     alignItems: "center",
     justifyContent: "center"
   },
