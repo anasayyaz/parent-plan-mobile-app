@@ -11,7 +11,7 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Feather from "react-native-vector-icons/Feather";
-import CustomPicker from "../Medication/CustomPicker";
+import CustomPicker from "../MedicationScreen/CustomPicker";
 import HeaderProvider from "../../Provider/HeaderProvider";
 import SVG from "../../assets/Images/SVG/SVG";
 import { useNavigation } from "@react-navigation/native";
@@ -72,7 +72,7 @@ const SubjectsScreen = () => {
   return (
     <HeaderProvider
       leftIcon={{
-        component: <Ionicons name="arrow-back" size={24} color="white" />,
+        component: <SVG.Menu />,
         onPress: () => navigation.openDrawer()
       }}
       centerText="Subjects"

@@ -117,3 +117,89 @@ export const MedicationScreenList = [
     reason: "Due to fever."
   }
 ];
+export const EducationalScreenList = [
+  {
+    id: "1",
+    childName: "Child 1",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "2",
+    childName: "Child 2",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "3",
+    childName: "Child 3",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "4",
+    childName: "Child 4",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "5",
+    childName: "Child 5",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "6",
+    childName: "Child 6",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "7",
+    childName: "Child 7",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "8",
+    childName: "Child 8",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "9",
+    childName: "Child 9",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "10",
+    childName: "Child 10",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "11",
+    childName: "Child 11",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  },
+  {
+    id: "12",
+    childName: "Child 12",
+    subject: "English",
+    date: "Sunday, Sep 1, 2024",
+    time: "1 pm"
+  }
+];

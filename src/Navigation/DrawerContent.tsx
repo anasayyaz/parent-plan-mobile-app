@@ -5,8 +5,10 @@ import SVG from "../assets/Images/SVG/SVG";
 import TextAura from "../Wrappers/TextAura";
 import Fonts from "../assets/fonts/Fonts";
 import Colors from "../assets/Colors";
+import { useNavigation } from "@react-navigation/native";
 
 const CustomDrawerContent = (props) => {
+  const navigation = useNavigation();
   return (
     <DrawerContentScrollView
       {...props}
@@ -39,55 +41,55 @@ const CustomDrawerContent = (props) => {
           label="Medication"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Pill />}
-          onPress={() => console.log("Medication")}
+          onPress={() => navigation.navigate("MedicationScreen")}
         />
         <DrawerItem
           label="Educational Details"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Bag />}
-          onPress={() => console.log("Educational Details")}
+          onPress={() => navigation.navigate("EducationalDetailsScreen")}
         />
         <DrawerItem
           label="Infant Report"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Infant />}
-          onPress={() => console.log("Infant Report")}
+          onPress={() => navigation.navigate("InfantReportScreen")}
         />
         <DrawerItem
           label="Injury Log"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Injury />}
-          onPress={() => console.log("Injury Log")}
+          onPress={() => navigation.navigate("InjuryLogScreen")}
         />
         <DrawerItem
           label="Contact Book"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.ContactBook />}
-          onPress={() => console.log("Contact Book")}
+          onPress={() => navigation.navigate("ContactBookScreen")}
         />
         <DrawerItem
           label="Expense Logs"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Currency />}
-          onPress={() => console.log("Expense Logs")}
+          onPress={() => navigation.navigate("ExpenseLogScreen")}
         />
         <DrawerItem
           label="Chat"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Chat />}
-          onPress={() => console.log("Chat")}
+          onPress={() => navigation.navigate("ChatScreen")}
         />
         <DrawerItem
           label="Personal Notes"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Notes />}
-          onPress={() => console.log("Personal Notes")}
+          onPress={() => navigation.navigate("PersonalNotesScreen")}
         />
         <DrawerItem
           label="Card Details"
           labelStyle={styles.drawerItemLabel}
           icon={() => <SVG.Card />}
-          onPress={() => console.log("Card Details")}
+          onPress={() => navigation.navigate("CardDetailsScreen")}
         />
       </View>
       <DrawerItem

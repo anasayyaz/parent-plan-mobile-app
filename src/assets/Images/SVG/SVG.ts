@@ -35,6 +35,15 @@ import Person from "./TabBarIcon/Person.svg";
 import PillWhite from "./Icon/PillWhite.svg";
 import CalendarEdit from "./Icon/CalendarEdit.svg";
 import DeleteRedOutlines from "./Icon/DeleteRedOutline.svg";
+import BagWhite from "./Icon/BagWhite.svg";
+import InjuryWhite from "./Icon/InjuryWhite.svg";
+import BedClock from "./Icon/BedClock.svg";
+import BabyBottle from "./Icon/BabyBottle.svg";
+import Meal from "./Icon/Meal.svg";
+import Diaper from "./Icon/Diaper.svg";
+import CardAccount from "./Icon/CardAccount.svg";
+import NotesText from "./Icon/NotesText.svg";
+import CardAccountDetails from "./Icon/CardAccountDetails.svg";
 
 export default {
   AppLogo: AppLogo,
@@ -70,5 +79,14 @@ export default {
   Person,
   PillWhite,
   CalendarEdit,
-  DeleteRedOutlines
+  DeleteRedOutlines,
+  BagWhite,
+  InjuryWhite,
+  BedClock,
+  BabyBottle,
+  Meal,
+  Diaper,
+  CardAccount,
+  NotesText,
+  CardAccountDetails
 };

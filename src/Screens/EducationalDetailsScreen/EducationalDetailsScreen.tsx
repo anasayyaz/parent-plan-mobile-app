@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { View, FlatList, StyleSheet, Text } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import SVG from "../../assets/Images/SVG/SVG";
-import HeaderProvider from "../../Provider/HeaderProvider";
 import { useNavigation } from "@react-navigation/native";
-import { MedicationScreenList } from "../../assets/MockData/mocks";
-import CustomPicker from "./CustomPicker";
+import React, { useState } from "react";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import SVG from "../../assets/Images/SVG/SVG";
+import { EducationalScreenList } from "../../assets/MockData/mocks";
+import HeaderProvider from "../../Provider/HeaderProvider";
+import CustomPicker from "../MedicationScreen/CustomPicker";
 
-const MedicationScreen = () => {
+const EducationalDetailsScreen = () => {
   const navigation = useNavigation();
   const [selectedChild, setSelectedChild] = useState("All");
 
@@ -15,24 +14,25 @@ const MedicationScreen = () => {
 
   const filteredData =
     selectedChild === "All"
-      ? MedicationScreenList
-      : MedicationScreenList.filter((item) => item.childName === selectedChild);
+      ? EducationalScreenList
+      : EducationalScreenList.filter(
+          (item) => item.childName === selectedChild
+        );
 
   const renderItem = ({ item }) => (
     <View style={styles.card}>
       <View style={styles.leftSection}>
         <View style={styles.iconContainer}>
-          <SVG.PillWhite />
+          <SVG.BagWhite />
         </View>
       </View>
       <View style={styles.middleSection}>
         <Text style={styles.childName}>
           {item.childName}{" "}
-          <Text style={styles.medication}>({item.medication})</Text>
+          <Text style={styles.medication}>({item.subject})</Text>
         </Text>
         <Text style={styles.date}>{item.date}</Text>
         <Text style={styles.time}>{item.time}</Text>
-        <Text style={styles.reason}>{item.reason}</Text>
       </View>
       <View style={styles.rightSection}>
         <SVG.CalendarEdit height={25} width={25} />
@@ -45,10 +45,10 @@ const MedicationScreen = () => {
     <View style={styles.container}>
       <HeaderProvider
         leftIcon={{
-          component: <Ionicons name="arrow-back" size={24} color="white" />,
+          component: <SVG.Menu />,
           onPress: () => navigation.openDrawer()
         }}
-        centerText="Medication"
+        centerText="Educational Details"
         rightIcon={{ component: <SVG.Bell />, onPress: () => {} }}
       >
         {/* Custom Picker */}
@@ -138,4 +138,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MedicationScreen;
+export default EducationalDetailsScreen;
